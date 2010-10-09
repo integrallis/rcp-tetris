@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.integrallis.rcp.games.tetris.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Perspective"
+            class="org.integrallis.rcp.games.tetris.Perspective"
+            id="org.integrallis.rcp.games.tetris.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="View"
+            class="org.integrallis.rcp.games.tetris.TretrisView"
+            id="org.integrallis.rcp.games.tetris.view">
+      </view>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.integrallis.rcp.games.tetris.application"
+            description="An Eclipse RCP Tetris Clone"
+            name="RCP Tetris">
+         <property
+               name="windowImages"
+               value="icons/alt_window_16.gif,icons/alt_window_32.gif">
+         </property>
+         <property
+               name="aboutImage" 
+               value="icons/alt_about.png">
+         </property>
+         <property
+               name="aboutText"
+               value="RCP Tetris by Brian Sam-Bodden based on by Christian Schneider (c.schneider@scram.de) original code (GPL)">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
